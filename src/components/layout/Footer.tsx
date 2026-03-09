@@ -2,20 +2,7 @@
 import { Gavel } from "lucide-react";
 import { Button } from "../ui/button";
 import { useLenis } from "lenis/react";
-const sections = [
-  { id: "hero", label: "Inicio" },
-  { id: "stats", label: "Stats" },
-  {
-    id: "practice",
-    label: "Áreas de Práctica",
-  },
-  {
-    id: "about",
-    label: "Resultados",
-  },
-  { id: "faq", label: "Preguntas" },
-  { id: "contact", label: "Contacto" },
-];
+import { sections } from "@/lib/sections";
 export function FooterSection() {
   const lenis = useLenis();
   return (

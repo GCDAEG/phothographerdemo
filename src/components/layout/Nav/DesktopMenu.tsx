@@ -1,4 +1,4 @@
-import { NavSection } from "@/lib/section";
+import { NavSection } from "@/lib/sections";
 import { cn } from "@/lib/utils";
 import { Gavel } from "lucide-react";
 import { motion } from "framer-motion";

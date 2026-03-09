@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { FooterSection } from "../components/layout/Footer";
 import ExampleMessage from "@/components/layout/Sections/Example";
-import { NavbarBase } from "@/components/layout/Nav";
+import { Navbar } from "@/components/layout/Nav";
 import { roboto, lora, montserrat } from "@/lib/fonts";
 import ReactLenis from "lenis/react";
+import PageLoader from "./PageLoader";
 
 const metadata: Metadata = {
   title: {
@@ -51,7 +52,8 @@ export default function RootLayout({
       >
         {/* Opcional: capa extra para overlay si quieres más control */}
         <ReactLenis root>
-          <NavbarBase />
+          <PageLoader />
+          <Navbar />
           {children}
           <FooterSection />
           <ExampleMessage />

@@ -7,7 +7,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { FaBars } from "react-icons/fa";
-import { NavSection } from "@/lib/section";
+import { NavSection } from "@/lib/sections";
 import Link from "next/link";
 import { Gavel, Heart } from "lucide-react";
 import { motion } from "framer-motion";
@@ -39,7 +39,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
       }}
       className={cn(
         "w-full mx-auto h-12 px-5 md:px-6 lg:px-28 flex items-center justify-between md:hidden absolute z-50 ",
-        !isScrolled && "bg-linear-to-b from-black/20",
+        isScrolled ? "" : "bg-linear-to-b from-black/20",
       )}
     >
       {/* Logo */}

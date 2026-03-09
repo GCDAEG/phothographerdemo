@@ -8,27 +8,27 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
-const WHATSAPP_NUMBER = "5491234567890"; // ← tu número real
+// const WHATSAPP_NUMBER = "5491234567890"; // ← tu número real
 
 export default function WhatsAppChatInput() {
   const [message, setMessage] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleSend = () => {
-    if (!message.trim()) return;
+  // const handleSend = () => {
+  //   if (!message.trim()) return;
 
-    const encoded = encodeURIComponent(message.trim());
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, "_blank");
+  //   const encoded = encodeURIComponent(message.trim());
+  //   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, "_blank");
 
-    setMessage("");
-    setIsOpen(false);
-  };
+  //   setMessage("");
+  //   setIsOpen(false);
+  // };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
-      handleSend();
+      // handleSend();
     }
   };
 
@@ -93,7 +93,7 @@ export default function WhatsAppChatInput() {
             />
 
             <Button
-              onClick={handleSend}
+              onClick={() => {}}
               disabled={!message.trim()}
               size="icon"
               className={cn(

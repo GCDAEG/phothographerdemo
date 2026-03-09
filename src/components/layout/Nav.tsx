@@ -12,25 +12,12 @@ import { useWindowScroll } from "react-use";
 import { Banner } from "./Nav/banner";
 import { useActiveSection } from "@/lib/hooks/useActiveSection";
 import { useScrollSpy } from "@/lib/hooks/useScrollSpy";
+import { sections } from "@/lib/sections";
 
-const sections = [
-  { id: "hero", label: "Inicio" },
-  { id: "stats", label: "Stats" },
-  {
-    id: "practice",
-    label: "Áreas de Práctica",
-  },
-  {
-    id: "about",
-    label: "Resultados",
-  },
-  { id: "faq", label: "Preguntas" },
-];
-
-export function NavbarBase() {
+export function Navbar() {
   const ref = useRef<HTMLElement>(null);
   const { y } = useWindowScroll();
-  const isScrolled = y >= 70;
+  const [isScrolled, setisScrolled] = useState<boolean>(false);
   /* ---------------------------------------------
      Scroll to section
   --------------------------------------------- */
@@ -44,24 +31,10 @@ export function NavbarBase() {
      Sección activa (limpio)
   --------------------------------------------- */
   const activeSection = useScrollSpy(sections.map((s) => s.id));
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       const visible = entries.find((e) => e.isIntersecting);
-  //       if (visible) setActiveSection(visible.target.id);
-  //     },
-  //     {
-  //       threshold: 0.6,
-  //     },
-  //   );
 
-  //   sections.forEach((s) => {
-  //     const el = document.getElementById(s.id);
-  //     if (el) observer.observe(el);
-  //   });
-
-  //   return () => observer.disconnect();
-  // }, []);
+  useEffect(() => {
+    setisScrolled(y >= 70);
+  }, [y]);
 
   return (
     <motion.nav
