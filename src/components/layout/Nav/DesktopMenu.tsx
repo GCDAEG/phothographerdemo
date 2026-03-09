@@ -10,7 +10,6 @@ import { useLenis } from "lenis/react";
 interface DesktopMenuProps {
   sections: NavSection[];
   activeSection: string | null;
-  scrollToSection: (id: string) => void;
   isScrolled: boolean;
 }
 

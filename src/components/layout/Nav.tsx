@@ -18,15 +18,7 @@ export function Navbar() {
   const ref = useRef<HTMLElement>(null);
   const { y } = useWindowScroll();
   const [isScrolled, setisScrolled] = useState<boolean>(false);
-  /* ---------------------------------------------
-     Scroll to section
-  --------------------------------------------- */
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (!el) return;
 
-    el.scrollIntoView({ behavior: "smooth" });
-  };
   /* ---------------------------------------------
      Sección activa (limpio)
   --------------------------------------------- */
@@ -49,13 +41,11 @@ export function Navbar() {
       <DesktopMenu
         sections={sections}
         activeSection={activeSection}
-        scrollToSection={scrollToSection}
         isScrolled={isScrolled}
       />
       <MobileMenu
         sections={sections}
         activeSection={activeSection}
-        scrollToSection={scrollToSection}
         isScrolled={isScrolled}
       />
     </motion.nav>

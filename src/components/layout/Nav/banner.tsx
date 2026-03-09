@@ -8,10 +8,10 @@ import { LiaLinkedin } from "react-icons/lia";
 import { FaFacebook } from "react-icons/fa";
 
 const socialLinks = [
-  { href: "https://twitter.com", icon: BsTwitter, label: "Twitter / X" },
-  { href: "https://facebook.com", icon: FaFacebook, label: "Facebook" },
-  { href: "https://linkedin.com", icon: LiaLinkedin, label: "LinkedIn" },
-  { href: "https://instagram.com", icon: BsInstagram, label: "Instagram" },
+  { href: "#", icon: BsTwitter, label: "Twitter / X" },
+  { href: "#", icon: FaFacebook, label: "Facebook" },
+  { href: "#", icon: LiaLinkedin, label: "LinkedIn" },
+  { href: "#", icon: BsInstagram, label: "Instagram" },
 ];
 const contactInfo = [
   { id: "0", main: "8:00 - 9:00", sub: "Opening Hour Mon-Fri" },
