@@ -8,12 +8,12 @@ import { HeroCTAButton } from "@/components/ui/CTAButton";
 const HeroSection = ({}) => {
   return (
     <BackgroundVideo
-      className={`bg-red-500/30 items-end py-12`}
+      className={`items-end py-12`}
       src="/backgroundvideo.mp4"
       overlay={"gradient"}
       id="hero"
     >
-      <div className="w-full flex justify-end md:justify-center flex-col gap-6 px-4 py-8 md:text-center pb-5 bg-secondary/60 text-foreground">
+      <div className="w-full flex justify-end md:justify-center flex-col gap-6 px-4 py-8 md:text-center pb-5 bg-secondary/30 text-foreground">
         <div className="flex flex-col gap-5 flex-1 justify-end items-center  ">
           <h1 className="">AGUAYRIO</h1>
           <p
