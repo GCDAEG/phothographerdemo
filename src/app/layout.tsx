@@ -12,25 +12,37 @@ import { cn } from "@/lib/utils";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: {
-    default: "Tu Web Hoy - Páginas web rápidas y accesibles",
+    default: "TWH Demo",
     template: "%s | Tu Web Hoy",
   },
+
   description:
-    "Páginas web simples, modernas y económicas para negocios. Entrega rápida, precio accesible.",
-  keywords: [
-    "páginas web",
-    "sitios web rápidos",
-    "landing pages",
-    "desarrollo web Argentina",
-  ],
+    "Creamos páginas web simples y modernas para emprendedores. Ideales para mostrar tu negocio y empezar a vender.",
+
   openGraph: {
-    title: "Tu Web Hoy",
-    description: "Tu sitio web profesional listo en días",
-    url: "https://tudominio.com",
-    siteName: "Tu Web Hoy",
-    images: ["/og-image.jpg"], // agrega tu imagen OG
+    title: "Tu web lista en días 🚀",
+    description:
+      "Páginas web modernas, claras y accesibles. Ideal para emprendedores y negocios chicos.",
+    images: [
+      {
+        url: "/preview.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Tu Web Hoy - Páginas web listas en días",
+      },
+    ],
+    type: "website",
+    locale: "es_AR",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Tu web lista en días",
+    description:
+      "Webs modernas y accesibles para emprendedores. Lista para compartir y vender.",
+    images: ["/preview.jpeg"],
   },
 };
 
